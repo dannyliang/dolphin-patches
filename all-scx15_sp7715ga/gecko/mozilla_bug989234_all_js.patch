@@ -1,0 +1,13 @@
+diff --git a/modules/libpref/src/init/all.js b/modules/libpref/src/init/all.js
+index 791dab2..6d272c6 100644
+--- a/modules/libpref/src/init/all.js
++++ b/modules/libpref/src/init/all.js
+@@ -564,7 +564,7 @@ pref("devtools.debugger.force-local", true);
+ // Display a prompt when a new connection starts to accept/reject it
+ pref("devtools.debugger.prompt-connection", true);
+ // Block tools from seeing / interacting with certified apps
+-pref("devtools.debugger.forbid-certified-apps", true);
++pref("devtools.debugger.forbid-certified-apps", false);
+ 
+ // DevTools default color unit
+ pref("devtools.defaultColorUnit", "hex");

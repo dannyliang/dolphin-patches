@@ -1,0 +1,18 @@
+diff --git a/b2g/chrome/content/shell.js b/b2g/chrome/content/shell.js
+index 77623d2..bbf7bb9 100644
+--- a/b2g/chrome/content/shell.js
++++ b/b2g/chrome/content/shell.js
+@@ -1082,7 +1082,12 @@ let RemoteDebugger = {
+   _running: false,
+ 
+   prompt: function debugger_prompt() {
+-    this._promptDone = false;
++  try {
++ //     if (Services.prefs.getBoolPref("debugger.bypass_prompt") === true) {
++        return true;
++   //   }
++   } catch(e) {}  
++  this._promptDone = false;
+ 
+     shell.sendChromeEvent({
+       "type": "remote-debugger-prompt"

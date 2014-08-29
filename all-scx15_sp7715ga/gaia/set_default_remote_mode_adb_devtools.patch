@@ -1,0 +1,15 @@
+diff --git a/build/settings.js b/build/settings.js
+index 542c874..bac2210 100644
+--- a/build/settings.js
++++ b/build/settings.js
+@@ -125,9 +125,7 @@ function execute(config) {
+ 
+   settings['language.current'] = config.GAIA_DEFAULT_LOCALE;
+ 
+-  if (config.DEVICE_DEBUG) {
+-    settings['debugger.remote-mode'] = 'adb-devtools';
+-  }
++  settings['debugger.remote-mode'] = 'adb-devtools';
+ 
+   if (config.NO_LOCK_SCREEN) {
+     settings['screen.timeout'] = 0;
